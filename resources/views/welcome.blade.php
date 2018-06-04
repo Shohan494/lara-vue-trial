@@ -82,8 +82,8 @@
                     Laravel
                 </div>
 
-                <div>          
-WELCOME
+                <div>
+                    
                 </div>
 
                 <div class="links">

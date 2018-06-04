@@ -11,15 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('speedtest');
-});
-
 Auth::routes();
+Route::resource('companies', 'CompaniesController', ['except' => ['create', 'edit']]);
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Route::group(['prefix' => '/v1', 'namespace' => 'Api\V1', 'as' => 'api.'], function () {
-    Route::resource('companies', 'CompaniesController', ['except' => ['create', 'edit']]);
-});
+Route::get('/', 'WelcomeController@index');
